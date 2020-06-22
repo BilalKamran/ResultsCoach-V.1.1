@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Results.coach</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/alll.css">
+  <!-- <link rel="stylesheet" href="plugins/fontawesome-free/css/light.css"> -->
+  <!-- IonIcons -->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Pixeden Icons -->
+  <link rel="stylesheet" href="dist/css/Pe-icon-7-stroke.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- Drop Zone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/dropzone.min.css" />
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  
+
+  <!-- Animate.css style -->
+  <link rel="stylesheet" href="dist/css/animate.min.css">
+  
+  <!-- Custom style -->
+  <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to to the body tag
+to get the desired effect
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition sidebar-min">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-primary navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-auto">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+
+      <!-- Share -->
+      <li class="nav-item dropdown">
+        <a class="nav-link share" data-toggle="dropdown" href="#">
+          <i class="fas fa-share-alt"></i>
+          <!-- <span class="badge badge-danger navbar-badge">3</span> -->
+        </a>
+      </li>
+      
+      <!-- Settings -->
+      <li class="nav-item dropdown" onclick="window.location.href='settings.html'">
+        <a class="nav-link settings" data-toggle="dropdown" href="#">
+          <i class="fas fa-cog"></i>
+        </a>
+      </li>
+
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link notifications" data-toggle="dropdown" href="#">
+          <i class="fa fa-bell"></i>
+          <span class="badge badge-warning navbar-badge"> </span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <!-- <span class="float-right text-muted text-sm">3 mins</span> -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <!-- <span class="float-right text-muted text-sm">12 hours</span> -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <!-- <span class="float-right text-muted text-sm">2 days</span> -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+
+      <!-- Profile Image -->
+      <li class="nav-item dropdown profile-img">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="dist/img/avatar.jpg" width="30" class="rounded-circle">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Edit Profile</a>
+          <a class="dropdown-item" href="#">Log Out</a>
+        </div>
+      </li>
+
+      <!-- <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button"><i
+            class="fas fa-th-large"></i></a>
+      </li> -->
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link bg-primary logo-sideBar">
+      <img src="dist/img/logo.png" alt="Logo" class="brand-image">
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-5">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon pe-7s-target fs-21"></span>
+              <p>
+                By Target
+                <span class="badge badge-primary right">7</span>
+              </p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <!-- <i class="nav-icon far fa-chart-bar"></i> -->
+              <i class="nav-icon pe-7s-graph3 fs-21"></i>
+              <p>
+                By Activity
+                <span class="badge badge-primary right">1</span>
+              </p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <!-- <i class="nav-icon fas fa-chart-line"></i> -->
+              <i class="nav-icon pe-7s-display2 fs-21"></i>
+              <p>
+                Planned
+                <span class="badge badge-primary right">3</span>
+              </p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <!-- <i class="nav-icon fas fa-exclamation-triangle"></i> -->
+              <i class="nav-icon pe-7s-attention fs-21"></i>
+              <p>
+                Overdue
+                <span class="badge badge-primary right">1</span>
+              </p>
+            </a>
+          </li>
+         
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <!-- <i class="nav-icon far fa-star"></i> -->
+              <i class="nav-icon pe-7s-star fs-21"></i>
+              <p>
+                Starred
+                <span class="badge badge-primary right">1</span>
+              </p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <!-- <i class="nav-icon fas fa-signature"></i> -->
+              <i class="nav-icon pe-7s-display1 fs-21"></i>
+              <p>
+                Status
+                <span class="badge badge-primary right">1</span>
+              </p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <!-- <i class="nav-icon far fa-folder-open"></i> -->
+              <i class="nav-icon pe-7s-folder fs-21"></i>
+              <p>
+                Completed
+                <span class="badge badge-primary right">1</span>
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-header"><hr></li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <!-- <i class="nav-icon far fa-plus-square"></i> -->
+              <i class="nav-icon pe-7s-plus fs-21"></i>
+              <p></p>
+            </a>
+          </li>
+        
+        </ul>
+
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  
+  <div class="content-wrapper">
+    
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2 drop-shadow">
+          <div class="col-sm-12 col-md-12 col-lg-12 pl-0 pr-0">
+
+            <div id="month_year">
+              <a href="#" onclick="changeMonth('<')" class="bg-primary mr-auto"><i class="fas fa-arrow-left"></i></a>
+              <h5 class="animate__animated animate__faster"><b></b></h5>
+              <a href="#" onclick="changeMonth('>')" class="bg-primary ml-auto"><i class="fas fa-arrow-right"></i></a>
+           </div>
+            <div id="calender" class="text-center">
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="card">
+              <div class="card-header border-0">
+                <div class="d-flex justify-content-between">
+                  <h3 class="card-title m-auto">Target Performance</h3>
+                  <!-- <a href="javascript:void(0);">View Report</a> -->
+                </div>
+              </div>
+              <div class="card-body p-1">
+                <div class="position-relative">
+                  <canvas id="visitors-chart" height="50"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4">
+            <div class="card">
+              <div class="card-header border-0">
+                <div class="d-flex justify-content-between">
+                  <h3 class="card-title m-auto">Number of Targets</h3>
+                </div>
+              </div>
+              <div class="card-body p-1">
+                <div class="chart">
+                  <canvas id="lineChart" style="min-height: 50px; height: 50px; max-height: 50px; max-width: 100%;"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4">
+            <div class="card">
+              <div class="card-header border-0">
+                <div class="d-flex justify-content-between">
+                  <h3 class="card-title m-auto">KPI Title</h3>
+                </div>
+              </div>
+              <div class="card-body p-1">
+                <div class="row">
+                  <div class="col-12 col-md-12 text-center">
+                    <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125"
+                           value="80" data-width="120" data-height="120" data-fgColor="#00c0ef" data-readonly="true"
+                           readonly="readonly">
+                    <!-- <div class="knob-label">80 %</div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4">
+            <div class="card">
+              <div class="card-header border-0">
+                <div class="d-flex justify-content-between">
+                  <h3 class="card-title m-auto">KPI Title</h3>
+                </div>
+              </div>
+              <div class="card-body p-1">
+                <div class="row">
+                  <div class="col-12 col-md-12 text-center">
+                    <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125"
+                           value="20" data-width="120" data-height="120" data-fgColor="#f56954">
+                    <!-- <div class="knob-label">80 %</div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6" style="display: none;">
+            
+            <!-- AREA CHART -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Area Chart</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="areaChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+
+
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+        <div class="p-3">
+          <h5>Title</h5>
+          <p>Sidebar content</p>
+        </div>
+        
+      </aside>
+
+
+    </div>
+
+    <!-- Activity -->
+    <a href="#" class="btn-add-new-activity btn btn-primary back-to-top rounded-circle mr-1 animate__animated animate__faster">
+      <i class="fal fa-lightbulb"></i>
+    </a>
+    
+    <!-- Sub Target -->
+    <a href="#" class="btn-add-new-sub-target btn btn-warning back-to-top rounded-circle mr-1 animate__animated animate__faster">
+      <!-- <i class="fal fa-bullseye"></i> -->
+      <i class="fal fa-dot-circle"></i>
+    </a>
+    
+    <!-- Target -->
+    <a href="#" onclick="openNav()" class="btn-add-new-target btn btn-info back-to-top rounded-circle mr-1 animate__animated animate__faster">
+      <span class="nav-icon pe-7s-target"></span>
+    </a>
+    
+    <a href="#" onclick="open_sub_options()" class="btn-add-new btn btn-primary back-to-top rounded-circle">
+      <i class="fal fa-plus fa-2x m-1"></i>
+    </a>
+
+  </div>
+
+  <!-- Right Side Bar -->
+  <div id="mySidebar" class="custom_sidebar">
+    <div class="content">
+      <a href="javascript:void(0)" class="mt-5 closebtn btn btn-primary" onclick="closeNav()">×</a>
+    </div>
+  
+
+    <!-- New Target Goes here -->
+    <div class="content">
+      <div>
+        <div class="container-fluid">
+
+          <div class="row">
+
+            <h5 class="ml-5 mt-5 text-dark">Add Results Target</h5>
+
+            <div class="col-12">
+
+              <form>
+                <div class="row mt-4 ml-4 mr-4">
+
+                  <!-- Target Name -->
+                  <div class="col-lg-8 col-md-8 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend">
+                            <small>Target Name</small>
+                            <span class="input-group-text settings">
+                              <span class="pe-7s-target"></span>
+                            </span>
+
+                            <input type="text" id="target_name" class="field">
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Status -->
+                  <div class="col-lg-4 col-md-4 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend">
+                            <small>Status</small>
+                            <span class="input-group-text settings">
+                              <!-- <i class="fas fa-signature"></i> -->
+                              <span class="pe-7s-display1 fs-17"></span>
+                            </span>
+
+                            <select id="status">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                    </div>
+                  </div>
+                
+                  <!-- Description -->
+                  <div class="col-lg-12 col-md-12 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend" id="textarea">
+                            <small>Description</small>
+
+                            <textarea id="description" cols="30" rows="4"></textarea>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Project -->
+                  <div class="col-lg-12 col-md-12 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend">
+                            <small>Project</small>
+                            <span class="input-group-text settings">
+                              <i class="fal fa-file-alt"></i>
+                            </span>
+
+                            <input type="text" id="project" class="field">
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Start Date -->
+                  <div class="col-lg-4 col-md-4 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend">
+                            <small>Start Date</small>
+                            <span class="input-group-text settings"><i class="fal fa-calendar-alt"></i></span>
+                            
+                            <input type="text" class="datetimepicker-input" data-toggle="datetimepicker" id="startdate" data-target="#startdate"/>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Reminder -->
+                  <div class="col-lg-4 col-md-4 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend">
+                            <small>Reminder</small>
+                            <span class="input-group-text settings"><i class="fal fa-bell"></i></span>
+                            
+                            <input type="text" id="reminder" class="field">
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Due Date -->
+                  <div class="col-lg-4 col-md-4 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend">
+                            <small>Due Date</small>
+                            <span class="input-group-text settings"><i class="fal fa-calendar-alt"></i></span>
+                            
+                            <input type="text" class="datetimepicker-input" data-toggle="datetimepicker" id="duedate" data-target="#duedate"/>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Target Base Line -->
+                  <div class="col-lg-4 col-md-4 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend">
+                            <small>Taget Baseline</small>
+                            <span class="input-group-text settings"><i class="fal fa-crosshairs"></i></span>
+                            
+                            <input type="text" id="baseline" class="field">
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Unit -->
+                  <div class="col-lg-4 col-md-4 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend">
+                            <small>Unit</small>
+                            <span class="input-group-text settings"><i class="fal fa-filter"></i></span>
+                            
+                            <input type="text" id="unit" class="field">
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Type -->
+                  <div class="col-lg-4 col-md-4 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend">
+                            <small>Type</small>
+                            <span class="input-group-text settings"><i class="fal fa-tools"></i></span>
+                            
+                            <input type="text" id="type" class="field">
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Target Value -->
+                  <div class="col-lg-4 col-md-4 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend">
+                            <small>Target Value</small>
+                            <span class="input-group-text settings">
+                              <!-- <i class="far fa-dollar-sign"></i> -->
+                              <i class="fas fa-usd-square"></i>
+                            </span>
+                            
+                            <input type="text" id="target_value" class="field">
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Target Value -->
+                  <div class="col-lg-4 col-md-4 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend">
+                            <small>Target</small>
+                            <span class="input-group-text settings"><i class="fal fa-crosshairs"></i></span>
+                            
+                            <input type="text" id="target" class="field">
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Assignee -->
+                  <div class="col-lg-4 col-md-4 form-group">
+                    <div class="input-group">
+                        <div class="form-control input-group-prepend">
+                            <small>Assignee</small>
+                            <span class="input-group-text settings"><i class="fal fa-user"></i></span>
+                            
+                            <input type="text" id="assignee" class="field">
+                        </div>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  <!-- Repeat -->
+                  <div class="col-lg-6 col-md-6 mt-2 form-group">
+                    <div class="input-group">
+                        <div class="form-control border-0 borderBottom">
+                            <span class="input-group-text settings">
+                              <i class="far fa-sync-alt mr-2"></i>
+                              Repeat
+                            </span>
+                            
+                            <!-- <input type="text" id="repeat" class="field" value="Repeat"> -->
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Measured -->
+                  <div class="col-lg-6 col-md-6 mt-2 form-group">
+                    <div class="input-group">
+                        <div class="form-control border-0 borderBottom">
+                            <span class="input-group-text settings">
+                              <i class="fal fa-calendar mr-2"></i>
+                              Measured
+                            </span>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Tag -->
+                  <div class="col-lg-6 col-md-6 mt-0 form-group">
+                    <div class="input-group mt_-10">
+                        <div class="form-control border-0 borderBottom">
+                            <span class="input-group-text settings">
+                              <!-- <i class="fal fa-folder mr-2"></i> -->
+                              <i class="fal fa-tag mr-2"></i>
+                              Tag
+                            </span>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Split By -->
+                  <div class="col-lg-6 col-md-6 mt-0 form-group">
+                    <div class="input-group mt_-10">
+                        <div class="form-control border-0 borderBottom">
+                            <span class="input-group-text settings">
+                              <i class="fal fa-folder mr-2"></i>
+                              Split By
+                            </span>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Importance -->
+                  <div class="col-lg-6 col-md-6 mt-0 form-group">
+                    <div class="input-group mt_-10">
+                        <div class="form-control border-0 borderBottom">
+                            <span class="input-group-text settings">
+                              <i class="fas fa-exclamation mr-2"></i>
+                              Importance
+                            </span>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Update Interval -->
+                  <div class="col-lg-6 col-md-6 mt-0 form-group">
+                    <div class="input-group mt_-10">
+                        <div class="form-control border-0 borderBottom">
+                            <span class="input-group-text settings">
+                              <i class="far fa-history mr-2" style="transform: scaleX(-1);"></i>
+                              Update Interval
+                            </span>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Category -->
+                  <div class="col-lg-6 col-md-6 mt-0 form-group">
+                    <div class="input-group mt_-10">
+                        <div class="form-control border-0 borderBottom">
+                            <span class="input-group-text settings">
+                              <i class="fal fa-folder mr-2"></i>
+                              Category
+                            </span>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Organizational Levels -->
+                  <div class="col-lg-6 col-md-6 mt-0 form-group">
+                    <div class="input-group mt_-10">
+                        <div class="form-control border-0 borderBottom">
+                            <span class="input-group-text settings">
+                              <i class="fal fa-building mr-2"></i>
+                              Organizational Levels
+                            </span>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Regional Split -->
+                  <div class="col-lg-6 col-md-6 mt-0 form-group">
+                    <div class="input-group mt_-10">
+                        <div class="form-control border-0 borderBottom">
+                            <span class="input-group-text settings">
+                              <!-- <i class="fas fa-globe-europe mr-2"></i> -->
+                              <i class="fal fa-globe mr-2"></i>
+                              Regional Split
+                            </span>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Frequency Measurement -->
+                  <div class="col-lg-6 col-md-6 mt-0 form-group">
+                    <div class="input-group mt_-10">
+                        <div class="form-control border-0 borderBottom">
+                            <span class="input-group-text settings">
+                              <i class="far fa-wave-square mr-2"></i>
+                              Frequency Measurement
+                            </span>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!-- File Upload -->
+                  <div class="col-lg-12 col-md-12 mt-2 form-group">
+                    <div class="dropzone" id="dz-1"></div>
+                  </div>
+
+
+
+                  <!-- Add Sub Results Target -->
+                  <div class="col-lg-12 col-md-12 mt-4">
+                    <div class="card">
+
+                        <!-- Add Sub Results Target -->
+                        <div class="form-group mt-4">
+                          <div class="card-header">
+                            <div class="row">
+
+                              <div class="col-lg-11 col-md-11 col-sm-11">
+                                <div class="input-group">
+                                  <div class="form-control input-group-prepend">
+                                      <small>Add Sub Results Target</small>
+                                      <span class="input-group-text settings"><i class="fal fa-dot-circle"></i></span>
+                                      
+                                      <input type="text" id="sub_results_target" class="field">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-lg-1 col-md-1 col-sm-1">
+                                <div class="card-tools">
+                                  <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                    <i class="fas fa-minus"></i>
+                                  </button>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                      <div class="card-body">
+
+                        <div class="row">
+                          
+                          <!-- Notes -->
+                          <div class="col-lg-12 col-md-12 form-group">
+                            <div class="input-group">
+                                <div class="form-control input-group-prepend" id="textarea">
+                                    <small>Notes</small>
+
+                                    <textarea id="description" cols="30" rows="4"></textarea>
+                                </div>
+                            </div>
+                          </div>
+
+                          <!-- Remind Me -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <!-- <i class="fal fa-folder mr-2"></i> -->
+                                      <i class="fal fa-bell mr-2"></i>
+                                      Remind Me
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Remind Me -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <!-- <i class="fal fa-folder mr-2"></i> -->
+                                      <i class="fal fa-globe mr-2"></i>
+                                      Regional Split
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Add Due Date -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <!-- <i class="fal fa-folder mr-2"></i> -->
+                                      <i class="fal fa-calendar-alt mr-2"></i>
+                                      Add Due Date
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Measured -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fal fa-calendar mr-2"></i>
+                                      Measured
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Repeat -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="far fa-sync-alt mr-2"></i>
+                                      Repeat
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Split By -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fal fa-folder mr-2"></i>
+                                      Split By
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Tag -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fal fa-tag mr-2"></i>
+                                      Tag
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Tag -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="far fa-history mr-2" style="transform: scaleX(-1);"></i>
+                                      Update Interval
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Tag -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fas fa-exclamation mr-2"></i>
+                                      Importance
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Organizational Levels -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fal fa-building mr-2"></i>
+                                      Organizational Levels
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Organizational Levels -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fal fa-user mr-2"></i>
+                                      Assignee
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Frequency Measurement -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="far fa-wave-square mr-2"></i>
+                                      Frequency Measurement
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Category -->
+                          <div class="col-lg-6 col-md-6 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fal fa-folder mr-2"></i>
+                                      Category
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+
+                          <!-- File Upload -->
+                          <div class="col-lg-12 col-md-12 mt-2 form-group">
+                            <div class="dropzone" id="dz-2"></div>
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="add-team-member" class="mt-2 ml-3">
+                    <i class="fal fa-plus mr-2"></i>
+                    Add Sub Results Target
+                  </p>
+
+
+
+                  <!-- Add Results Activity -->
+                  <div class="col-lg-12 col-md-12 mt-4">
+                    <div class="card">
+
+                        <!-- Add Results Activity -->
+                        <div class="form-group mt-4">
+                          <div class="card-header">
+                            <div class="row">
+
+                              <div class="col-lg-11 col-md-11 col-sm-11">
+                                <div class="input-group">
+                                  <div class="form-control input-group-prepend">
+                                      <small>Add Results Activity</small>
+                                      <span class="input-group-text settings"><i class="fal fa-dot-circle"></i></span>
+                                      
+                                      <input type="text" id="results_activity" class="field">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-lg-1 col-md-1 col-sm-1">
+                                <div class="card-tools">
+                                  <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                    <i class="fas fa-minus"></i>
+                                  </button>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                      <div class="card-body">
+
+                        <div class="row">
+                          
+                          <!-- Notes -->
+                          <div class="col-lg-12 col-md-12 form-group">
+                            <div class="input-group">
+                                <div class="form-control input-group-prepend" id="textarea">
+                                    <small>Notes</small>
+
+                                    <textarea id="description" cols="30" rows="4"></textarea>
+                                </div>
+                            </div>
+                          </div>
+
+                          <!-- Remind Me -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <!-- <i class="fal fa-folder mr-2"></i> -->
+                                      <i class="fal fa-bell mr-2"></i>
+                                      Remind Me
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Remind Me -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <!-- <i class="fal fa-folder mr-2"></i> -->
+                                      <i class="fal fa-globe mr-2"></i>
+                                      Regional Split
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Add Due Date -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <!-- <i class="fal fa-folder mr-2"></i> -->
+                                      <i class="fal fa-calendar-alt mr-2"></i>
+                                      Add Due Date
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Measured -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fal fa-calendar mr-2"></i>
+                                      Measured
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Repeat -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="far fa-sync-alt mr-2"></i>
+                                      Repeat
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Split By -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fal fa-folder mr-2"></i>
+                                      Split By
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Tag -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fal fa-tag mr-2"></i>
+                                      Tag
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Tag -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="far fa-history mr-2" style="transform: scaleX(-1);"></i>
+                                      Update Interval
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Tag -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fas fa-exclamation mr-2"></i>
+                                      Importance
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Organizational Levels -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fal fa-building mr-2"></i>
+                                      Organizational Levels
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Organizational Levels -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fal fa-user mr-2"></i>
+                                      Assignee
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Frequency Measurement -->
+                          <div class="col-lg-6 col-md-6 mt-0 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="far fa-wave-square mr-2"></i>
+                                      Frequency Measurement
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Category -->
+                          <div class="col-lg-6 col-md-6 form-group">
+                            <div class="input-group mt_-10">
+                                <div class="form-control border-0 borderBottom">
+                                    <span class="input-group-text settings">
+                                      <i class="fal fa-folder mr-2"></i>
+                                      Category
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+
+                          <!-- File Upload -->
+                          <div class="col-lg-12 col-md-12 mt-2 form-group">
+                            <div class="dropzone" id="dz-3"></div>
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Add Results Activity -->
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <p class="add-team-member" class="mt-2 ml-3">
+                      <i class="fal fa-plus mr-2"></i>
+                      Add Results Activity
+                    </p>
+                  </div>
+
+                  <div class="ml-auto col-lg-3 col-md-3 col-sm-3">Save As Template</div>
+                  <div class="col-lg-2 col-md-2 col-sm-2">Add To...</div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">Add To Today</div>
+
+                </div>
+              </form>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>  
+
+
+  
+</div>
+
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE -->
+<script src="dist/js/adminlte.js"></script>
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Moment -->
+<script src="plugins/moment/moment.min.js"></script>
+<!-- Tempusdominus -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Drop Zone -->
+<script src="dist/js/dropzone.js"></script>
+
+<script src="dist/js/pages/dashboard3.js"></script>
+
+<!-- KNOB Library -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+
+<script>
+
+    // Disabling autoDiscover
+    Dropzone.autoDiscover = false;
+    
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "60%";
+      if($('body').hasClass('sidebar-mini')){
+
+        $('body').removeClass('sidebar-mini').addClass('sidebar-collapse');
+      }
+      else{
+        $('body').addClass('sidebar-collapse');
+      }
+
+      // Close button fixed
+      $('.closebtn').css('position', 'fixed');
+      
+      // Hiding Add new Buttons
+      $('.back-to-top').hide();
+
+    }
+
+    function closeNav() {
+
+      document.getElementById("mySidebar").style.width = "0";
+
+      // Close button fixed
+      $('.closebtn').css('position', 'absolute');
+
+      // Displaying Add new BUttons
+      $('.back-to-top').removeClass('animate__fadeInUp').addClass('animate__fadeOutDown');
+      $('.back-to-top').show();
+    }
+
+    function open_sub_options(){
+
+      event.preventDefault();
+      if(!$('.btn-add-new-target').hasClass('animate__fadeInUp')){
+                
+        // Target
+        $('.btn-add-new-target').removeClass('animate__fadeOutDown').addClass('display animate__fadeInUp');
+
+        // Sub Target
+        $('.btn-add-new-sub-target').removeClass('animate__fadeOutDown').addClass('display animate__fadeInUp');
+                
+        // Activity
+        $('.btn-add-new-activity').removeClass('animate__fadeOutDown').addClass('display animate__fadeInUp');
+      }
+      else{
+
+        // Target
+        $('.btn-add-new-target').removeClass('animate__fadeInUp').addClass('animate__fadeOutDown');
+                
+        // Sub Target
+        $('.btn-add-new-sub-target').removeClass('animate__fadeInUp').addClass('animate__fadeOutDown');
+                
+        // Activity
+        $('.btn-add-new-activity').removeClass('animate__fadeInUp').addClass('animate__fadeOutDown');
+      }
+
+    }
+
+
+    function setMonth(date){
+
+      const month=getMonthName(date.getMonth());
+      const year=date.getFullYear();
+      const d=date.getDate();
+      const total_days=new Date(year, date.getMonth()+1, 0).getDate();
+
+      $('#calender').html('');
+
+      for(let i=1 ; i<=total_days ; i++){
+
+          if(i == d){
+
+              $('#calender').append(`<a href="#" id=`+i+` class="active_date" onclick="activeDate(this)">
+                  ${i} <br> ${getDayName(new Date(year,date.getMonth(), i))}
+              </a>`);
+          }
+          else{
+            $('#calender').append(`<a href="#" id=`+i+` onclick="activeDate(this)">
+                  ${i} <br> ${getDayName(new Date(year,date.getMonth(), i))}
+              </a>`);
+          }
+      }
+
+      // Set Current Month
+      $('#month_year > h5 > b').text(`${month.toUpperCase()} ${ year }`);
+    }
+    setMonth(new Date());
+
+    function getMonthName(num){
+
+        let months=["Jan", "Feb", "March", "April", "May", "June", "July", "Aug",
+            "Sep", "Oct", "Nov", "Dec"];
+            return months[num];
+    }
+
+    function getDayName(date){
+
+        let days=["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
+            return days[date.getDay()];
+    }
+
+    function activeDate(val){
+//      console.log(val.id-1+"");
+// 		console.log(document.getElementById(val.id-1+""));
+// 		console.log(parseInt(val.id)+1+"");
+// 		console.log(document.getElementById(parseInt(val.id)+1+""));
+		if(hasClass(val, 'active_date')){
+            if(val.id=="1"){
+                if(document.getElementById(parseInt(val.id)+1+"") != null && hasClass(document.getElementById(parseInt(val.id)+1+""), 'active_date')){
+                    //do nothing
+                } else {
+                    $(val).removeClass('active_date');
+                }
+            } else if(val.id=="31" || (val.id=="30" && document.getElementById(parseInt(val.id)+1+"") == null)){
+                if(document.getElementById(val.id-1+"") != null && hasClass(document.getElementById(val.id-1+""), 'active_date')){
+                    //do nothing
+                } else {
+                    $(val).removeClass('active_date');
+                }
+            } else {
+                if(document.getElementById(val.id-1+"") != null && hasClass(document.getElementById(val.id-1+""), 'active_date')
+                && document.getElementById(parseInt(val.id)+1+"") != null && hasClass(document.getElementById(parseInt(val.id)+1+""), 'active_date')){
+                    //do nothing
+                } else {
+                    $(val).removeClass('active_date');
+                }
+            }
+        } else {
+            if(val.id=="1"){
+                if(document.getElementById(parseInt(val.id)+1+"") != null && !hasClass(document.getElementById(parseInt(val.id)+1+""), 'active_date')){
+                    $('#calender a').removeClass('active_date');
+                    $(val).addClass('active_date');
+                } else {
+                    $(val).addClass('active_date');
+                }
+            } else if(val.id=="31" || (val.id=="30" && document.getElementById(parseInt(val.id)+1+"") == null)){
+                if(document.getElementById(val.id-1+"") != null && !hasClass(document.getElementById(val.id-1+""), 'active_date')){
+                    $('#calender a').removeClass('active_date');
+                    $(val).addClass('active_date');
+                } else {
+                    $(val).addClass('active_date');
+                }
+            } else {
+                if(document.getElementById(val.id-1+"") != null && !hasClass(document.getElementById(val.id-1+""), 'active_date')
+                && document.getElementById(parseInt(val.id)+1+"") != null && !hasClass(document.getElementById(parseInt(val.id)+1+""), 'active_date')){
+                    $('#calender a').removeClass('active_date');
+                    $(val).addClass('active_date');
+                } else {
+                    $(val).addClass('active_date');
+                }
+            }
+        }
+		// $('#calender a').removeClass('active_date');
+		// AJAX Call
+		// $(val).addClass('active_date');
+	}
+
+	function hasClass(element, className) {
+		return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+	}
+	
+	function changeMonth(ch){
+
+        let month = $('#month_year b').text().split(' ')[0];
+        let year = parseInt($('#month_year b').text().split(' ')[1]);
+
+        if($('#month_year > h5').hasClass('animate__fadeIn')){
+
+            $('#month_year > h5').removeClass('animate__fadeIn');
+        }
+
+
+        setTimeout(()=>{
+            $('#month_year > h5').addClass('animate__fadeIn');
+        }, 10);
+
+        // console.log(new Date(Date.parse(`${month} ${year}`)).getMonth()+1);
+
+        if(ch === '>'){
+
+            if(new Date(Date.parse(`${month} ${year}`)).getMonth()+1 > 11){
+                year++;
+                month="Jan";
+              
+                setTimeout(()=>{
+                    $('#month_year > h5 > b').text(`${getMonthName(new Date(Date.parse(`${month} ${year}`)).getMonth()).toUpperCase()} ${year}`);
+                    setMonth(new Date(year, new Date(Date.parse(`${month} ${year}`)).getMonth()));
+                }, 10);
+                
+            }
+            else{
+
+                setTimeout(()=>{
+                    $('#month_year > h5 > b').text(`${getMonthName(new Date(Date.parse(`${month} ${year}`)).getMonth()+1).toUpperCase()} ${year}`);
+                    setMonth(new Date(year, new Date(Date.parse(`${month} ${year}`)).getMonth()+1));
+                }, 10);
+
+            }
+        }
+        else{
+
+            if(new Date(Date.parse(`${month} ${year}`)).getMonth()-1 < 0){
+                year--;
+                month="Dec";
+              
+                setTimeout(()=>{
+                    $('#month_year > h5 > b').text(`${getMonthName(new Date(Date.parse(`${month} ${year}`)).getMonth()).toUpperCase()} ${year}`);
+                    setMonth(new Date(year, new Date(Date.parse(`${month} ${year}`)).getMonth()));
+                }, 10);
+            }
+            else{
+
+                setTimeout(()=>{
+                    $('#month_year > h5 > b').text(`${getMonthName(new Date(Date.parse(`${month} ${year}`)).getMonth()-1).toUpperCase()} ${year}`);
+                    setMonth(new Date(year, new Date(Date.parse(`${month} ${year}`)).getMonth()-1));
+                }, 10);
+            }
+        }
+
+    }
+
+
+    $(function () {
+
+      //Dropzone ID-1
+      var myDropzone1 = new Dropzone("#dz-1", {
+            url: "/",
+            paramName: "file",
+            maxFilesize: 1,
+            maxFiles: 10,
+            acceptedFiles: "image/*,application/pdf",
+            autoProcessQueue: false,
+            addRemoveLinks: true,
+        });
+      
+      //Dropzone ID-2
+      var myDropzone2 = new Dropzone("#dz-2", {
+            url: "/",
+            paramName: "file",
+            maxFilesize: 1,
+            maxFiles: 10,
+            acceptedFiles: "image/*,application/pdf",
+            autoProcessQueue: false,
+            addRemoveLinks: true,
+        });
+      
+      //Dropzone ID-3
+      var myDropzone3 = new Dropzone("#dz-3", {
+            url: "/",
+            paramName: "file",
+            maxFilesize: 1,
+            maxFiles: 10,
+            acceptedFiles: "image/*,application/pdf",
+            autoProcessQueue: false,
+            addRemoveLinks: true,
+        });
+
+        // $('#startUpload').click(function(){           
+        //     myDropzone1.processQueue();
+        //     myDropzone1.on("complete", function(file) {
+        //         console.log(myDropzone1.getQueuedFiles());
+        //     });
+
+        // });
+
+      // KNOB
+      $('.knob').knob({}); 
+
+      // Date Picker
+      $('#startdate').datetimepicker({ format: 'L' });
+      $('#duedate').datetimepicker({ format: 'L' });
+
+
+      
+      /* ChartJS
+      * -------
+      * Here we will create a few charts using ChartJS
+      */
+
+      //--------------
+      //- AREA CHART -
+      //--------------
+
+      var areaChartData = {
+        // labels  : ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [
+          {
+            label               : 'Digital Goods',
+            backgroundColor     : 'rgba(60,141,188,0.9)',
+            borderColor         : 'rgba(60,141,188,0.8)',
+            pointRadius          : false,
+            pointColor          : '#3b8bba',
+            pointStrokeColor    : 'rgba(60,141,188,1)',
+            pointHighlightFill  : '#fff',
+            pointHighlightStroke: 'rgba(60,141,188,1)',
+            // data                : [28, 48, 40, 19, 86, 27, 90]
+            data                : [100, 50, 100, 19, 100, 27, 90]
+          },
+          {
+            label               : 'Electronics',
+            backgroundColor     : 'rgba(210, 214, 222, 1)',
+            borderColor         : 'rgba(210, 214, 222, 1)',
+            pointRadius         : false,
+            pointColor          : 'rgba(210, 214, 222, 1)',
+            pointStrokeColor    : '#c1c7d1',
+            pointHighlightFill  : '#fff',
+            pointHighlightStroke: 'rgba(220,220,220,1)',
+            data                : [50, 100, 50, 81, 56, 55, 40]
+          },
+        ]
+      }
+
+      var areaChartOptions = {
+        maintainAspectRatio : false,
+        responsive : true,
+        legend: {
+          display: false
+        },
+        scales: {
+          xAxes: [{
+            gridLines : {
+              display : false,
+            }
+          }],
+          yAxes: [{
+            gridLines : {
+              display : false,
+            }
+          }]
+        }
+      }
+
+      //-------------
+      //- LINE CHART -
+      //--------------
+      var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
+      var lineChartOptions = jQuery.extend(true, {}, areaChartOptions)
+      var lineChartData = jQuery.extend(true, {}, areaChartData)
+      lineChartData.datasets[0].fill = false;
+      lineChartData.datasets[1].fill = false;
+      lineChartOptions.datasetFill = false
+
+      var lineChart = new Chart(lineChartCanvas, { 
+        type: 'line',
+        data: lineChartData, 
+        options: lineChartOptions
+      })
+
+    });
+
+</script>
+
+</body>
+</html>

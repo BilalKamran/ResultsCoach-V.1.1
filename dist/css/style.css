@@ -1,0 +1,309 @@
+
+/* -------------------------------------- Nav-Bar START -------------------------------------- */
+
+.settings, .share{
+    padding-right: 0px !important;
+}
+
+.profile-img{
+    margin-top: -2px !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.5);
+}
+  
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 0.7);
+}
+  
+.navbar-light .navbar-nav .nav-link.disabled {
+    color: rgba(255, 255, 255, 0.3);
+}
+  
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-badge {
+    font-size: .6rem;
+    font-weight: 300;
+    padding: 3px;
+    position: absolute;
+    right: 14px;
+    top: 11px;
+    counter-reset: '';
+}
+
+/* -------------------------------------- Nav-Bar END -------------------------------------- */
+
+
+
+
+/* -------------------------------------- Side-Bar START -------------------------------------- */
+
+[class*=sidebar-dark-]{
+    background-color: #f4f6f9;
+}
+
+[class*=sidebar-dark] .brand-link{
+
+    /* border-bottom: 0.1px solid #dee2e6; */
+    border-bottom: none;
+}
+
+.logo-sideBar{
+    padding: 1.13rem 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-pills .nav-link {
+    /* color: #6c757d; */
+    color: #6c757d !important;
+}
+
+.nav-sidebar > .nav-item:hover > .nav-link{
+    background-color: #e7e9ec !important;
+}
+
+.fs-21{
+    font-size: 21px !important;
+}
+
+/* -------------------------------------- Side-Bar END -------------------------------------- */
+
+
+
+
+/* -------------------------------------- Content START -------------------------------------- */
+
+.content-wrapper{
+    background-color: white;
+}
+
+.content{
+    /* background-color: white; */
+}
+
+.card-header{
+    border-bottom: none;
+    padding-top: 0.4rem;
+    padding-bottom: 0.3rem;
+}
+
+/* -------------------------------------- Content END -------------------------------------- */
+
+
+
+
+/* -------------------------------------- Content-Calender START -------------------------------------- */
+
+div#calender {
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+    min-height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div#calender a {
+    display: inline-block;
+    color: #495057;
+    text-align: center;
+    padding: 10px;
+    /* font-size: 0.8vw; */
+    font-size: 12px;
+    text-decoration: none;
+    transition: 0.1s;
+}
+  
+div#calender a:hover {
+    transform: scale(1.2);
+
+}
+
+#month_year{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#month_year h5 {
+    /* font-size: 1.4vw; */
+    font-size: 15px;
+}
+
+.active_date{
+    background: #c6eaff;
+    padding: 5px;
+}
+
+#month_year a{
+    /* font-size: 0.8vw; */
+    /* padding: 0.8vw; */
+    font-size: 15px;
+    padding: 10px;
+}
+
+.drop-shadow{
+    box-shadow: 0 7px 7px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+    border-radius: 10px;
+}
+/* -------------------------------------- Content-Calender END -------------------------------------- */
+
+
+
+
+/* -------------------------------------- Content-Settings START -------------------------------------- */
+
+.input-group-text.settings{
+    border: none;
+    background: transparent;
+    padding-left: 0px;
+}
+
+.form-control.input-group-prepend>small{
+    position:absolute;
+    top:-13px;
+    /* left:20px; */
+    padding: 4px;
+    font-size: 10px;
+    background-color:white;
+}
+
+.form-control.input-group-prepend input, .form-control.input-group-prepend select{
+    border: none;
+    outline: none;
+    width: 100%;
+    /* font-size: small; */
+    margin-left: 1em;
+}
+
+.form-control.input-group-prepend:focus-within{
+    border: 1px solid #0078d7;
+}
+
+.form-control.input-group-prepend:focus-within>small{
+    color: #0078d7;
+}
+
+.add-team-member:hover{
+    cursor: pointer;
+    user-select: none;
+}
+
+/* -------------------------------------- Content-Settings END -------------------------------------- */
+
+
+
+
+/* -------------------------------------- Content-Knob START -------------------------------------- */
+
+.custom-knob{
+    /* height: 10.4vh; */
+    height: 44px;
+}
+
+.knob-label{
+    color:#007bff;
+    font-weight: bold;
+}
+
+/* -------------------------------------- Content-Knob END -------------------------------------- */
+
+
+
+
+/* -------------------------------------- Add New Buttons START -------------------------------------- */
+
+.btn-add-new-target{
+    margin-bottom: 65px;
+    display: none;
+}
+
+.btn-add-new-sub-target{
+    margin-bottom: 115px;
+    display: none;
+}
+
+.btn-add-new-activity{
+    margin-bottom: 165px;
+    display: none;
+}
+
+.btn-add-new, .btn-add-new-target, .btn-add-new-sub-target, .btn-add-new-activity{
+    box-shadow:0 0.46875rem 2.1875rem rgba(4,9,20,0.03),0 0.9375rem 1.40625rem rgba(4,9,20,0.03),0 0.25rem 0.53125rem rgba(4,9,20,0.05),0 0.125rem 0.1875rem rgba(4,9,20,0.03);
+    border: 2px solid white;
+}
+
+.btn-add-new-target.display, .btn-add-new-sub-target.display, .btn-add-new-activity.display{
+    display: block;
+}
+
+/* -------------------------------------- Add New Buttons END -------------------------------------- */
+
+
+
+
+/* -------------------------------------- Right Side Bar START -------------------------------------- */
+
+.custom_sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow:0 0.46875rem 2.1875rem rgba(4,9,20,0.03),0 0.9375rem 1.40625rem rgba(4,9,20,0.03),0 0.25rem 0.53125rem rgba(4,9,20,0.05),0 0.125rem 0.1875rem rgba(4,9,20,0.03);
+}
+  
+.custom_sidebar .closebtn {
+    position: absolute;
+    /* position: fixed; */
+    top: 16px;
+    z-index: 10;
+    right: 25px;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+textarea{
+    width: 100%;
+    outline: none;
+    resize: none;
+    border: none;
+}
+
+.input-group-prepend#textarea{
+    height: auto;
+}
+
+.borderBottom{
+    border-bottom: 1px solid #ced4da !important;
+    border-radius: 0%;
+}
+
+.mt_-10{
+    margin-top: -10px;
+}
+
+.dropzone{
+    border: 1.5px dashed #ced4da;
+    min-height: fit-content;
+    padding: 0px;
+}
+
+.fs-17{
+    font-size: 18px !important;
+}
+
+
+/* -------------------------------------- Right Side Bar END -------------------------------------- */
