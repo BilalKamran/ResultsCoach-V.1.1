@@ -22,6 +22,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/dropzone.min.css" />
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- Slick -->
+  <link rel="stylesheet" href="plugins/slick/css/slick.css">
+  <link rel="stylesheet" href="plugins/slick/css/slick-theme.css">
   
 
   <!-- Animate.css style -->
@@ -46,9 +49,19 @@ to get the desired effect
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-primary navbar-light">
     <!-- Left navbar links -->
-    <ul class="navbar-nav">
+    
+    <ul class="navbar-nav pushmenu-top">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- LOGO -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="index.html" class="brand-link bg-primary logo-sideBar">
+          <img src="dist/img/logo.png" alt="Logo" class="brand-image">
+        </a>
       </li>
     </ul>
 
@@ -129,8 +142,117 @@ to get the desired effect
   </nav>
   <!-- /.navbar -->
 
+
+  <!-- =================================== Calender-START =================================== -->
+  <div class="mt-2 mb-2 ml-4 mr-4">
+    <div class="row drop-shadow">
+      <div class="col-sm-12 col-md-12 col-lg-12 pl-0 pr-0">
+  
+       <div id="calender-wrapper">
+        
+        <a id="month_year-arrow-left" href="#" onclick="changeMonth('<')" class="bg-primary mr-auto"><i class="fas fa-arrow-left"></i></a>
+  
+        <!-- Calender Dates -->
+         <div id="calender" class="text-center"></div>
+  
+         <!-- Calender Month & Year -->
+         <div id="month_year">
+           <h5 class="animate__animated animate__faster"><b></b></h5>
+         </div>
+  
+         <a id="month_year-arrow-right" href="#" onclick="changeMonth('>')" class="bg-primary ml-auto"><i class="fas fa-arrow-right"></i></a>
+  
+       </div>
+  
+      </div>
+    </div>
+  </div>
+  <!-- =================================== Calender-END =================================== -->
+
+
+  <!-- =================================== Slick-START =================================== -->
+    <!-- container -->
+    <div class="row pl-3 pr-3 ml-0 mr-0">
+      <div class="col-11 ml-auto mr-auto">
+        <div class="responsive">
+
+          <div class="card">
+            <div class="card-header border-0">
+              <div class="d-flex justify-content-between">
+                <h3 class="card-title m-auto">Target Performance</h3>
+              </div>
+              <div class="card-body pt-1 pl-0 pr-0 pb-0">
+                <div class="position-relative">
+                  
+                  <canvas id="lineChart" style="min-height: 50px; height: 50px; max-height: 50px; max-width: 100%;"></canvas>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+      
+          <div class="card">
+            <div class="card-header border-0">
+              <div class="d-flex justify-content-between">
+                <h3 class="card-title m-auto">Number of Targets</h3>
+              </div>
+              <div class="card-body pt-1 pl-0 pr-0 pb-0">
+                <div class="position-relative">
+                  <canvas id="visitors-chart" style="min-height: 50px; height: 50px; max-height: 50px; max-width: 100%;"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card">
+            <div class="card-header border-0">
+              <div class="d-flex justify-content-between">
+                <h3 class="card-title m-auto">KPI Title</h3>
+              </div>
+              <div class="card-body pt-1 pl-0 pr-0 pb-0">
+                <div class="position-relative">
+                  <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125"
+                          value="80" data-width="120" data-height="120" data-fgColor="#00c0ef" data-readonly="true"
+                          readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header border-0">
+              <div class="d-flex justify-content-between">
+                <h3 class="card-title m-auto">KPI Title</h3>
+              </div>
+              <div class="card-body pt-1 pl-0 pr-0 pb-0">
+                <div class="position-relative">
+                  <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125"
+                          value="80" data-width="120" data-height="120" data-fgColor="#dc3545" data-readonly="true"
+                          readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header border-0">
+              <div class="d-flex justify-content-between">
+                <h3 class="card-title m-auto p-4">Block 4</h3>
+              </div>
+              
+            </div>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  
+  <!-- =================================== Slick-END =================================== -->
+  
+
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary">
+    
     <!-- Brand Logo -->
     <a href="index.html" class="brand-link bg-primary logo-sideBar">
       <img src="dist/img/logo.png" alt="Logo" class="brand-image">
@@ -141,7 +263,7 @@ to get the desired effect
       
 
       <!-- Sidebar Menu -->
-      <nav class="mt-5">
+      <nav class="mt-3">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           
 
@@ -220,16 +342,29 @@ to get the desired effect
               </p>
             </a>
           </li>
-
-          <li class="nav-header"><hr></li>
-
-          <li class="nav-item">
+          
+          <!-- <li class="nav-item">
+            <a href="#" class="nav-link" style="width: 100%; height: fit-content; border-bottom: 1px solid rgba(0,0,0,.1); text-align: center">
+              <span style="background-color: #f4f6f9; padding: 0 10px;">
+                <i class="fal fa-chart-pie"></i>
+              </span>
+            </a>
+          </li> -->
+          
+          <li class="nav-item reports mt-4">
             <a href="#" class="nav-link">
-              <!-- <i class="nav-icon far fa-plus-square"></i> -->
-              <i class="nav-icon pe-7s-plus fs-21"></i>
-              <p></p>
+              <span>
+                <hr>
+                <i class="pl-2 pr-2 fa-2x fal fa-chart-pie"></i>
+                <hr>
+              </span>
+              <p>Reports</p>
             </a>
           </li>
+
+          
+
+          <!-- <li class="nav-header"><hr></li> -->
         
         </ul>
 
@@ -241,23 +376,11 @@ to get the desired effect
 
   
   <div class="content-wrapper">
+
     
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2 drop-shadow">
-          <div class="col-sm-12 col-md-12 col-lg-12 pl-0 pr-0">
-
-            <div id="month_year">
-              <a href="#" onclick="changeMonth('<')" class="bg-primary mr-auto"><i class="fas fa-arrow-left"></i></a>
-              <h5 class="animate__animated animate__faster"><b></b></h5>
-              <a href="#" onclick="changeMonth('>')" class="bg-primary ml-auto"><i class="fas fa-arrow-right"></i></a>
-           </div>
-            <div id="calender" class="text-center">
-              
-            </div>
-
-          </div>
-        </div>
+        
       </div>
     </div>
 
@@ -265,96 +388,67 @@ to get the desired effect
     <div class="content">
       <div class="container-fluid">
         <div class="row">
+          
+          <div class="all-targets col-lg-12 col-md-12 col-sm-12">
 
-          <div class="col-lg-3 col-md-4">
-            <div class="card">
-              <div class="card-header border-0">
-                <div class="d-flex justify-content-between">
-                  <h3 class="card-title m-auto">Target Performance</h3>
-                  <!-- <a href="javascript:void(0);">View Report</a> -->
-                </div>
-              </div>
-              <div class="card-body p-1">
-                <div class="position-relative">
-                  <canvas id="visitors-chart" height="50"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4">
-            <div class="card">
-              <div class="card-header border-0">
-                <div class="d-flex justify-content-between">
-                  <h3 class="card-title m-auto">Number of Targets</h3>
-                </div>
-              </div>
-              <div class="card-body p-1">
-                <div class="chart">
-                  <canvas id="lineChart" style="min-height: 50px; height: 50px; max-height: 50px; max-width: 100%;"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4">
-            <div class="card">
-              <div class="card-header border-0">
-                <div class="d-flex justify-content-between">
-                  <h3 class="card-title m-auto">KPI Title</h3>
-                </div>
-              </div>
-              <div class="card-body p-1">
-                <div class="row">
-                  <div class="col-12 col-md-12 text-center">
-                    <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125"
-                           value="80" data-width="120" data-height="120" data-fgColor="#00c0ef" data-readonly="true"
-                           readonly="readonly">
-                    <!-- <div class="knob-label">80 %</div> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4">
-            <div class="card">
-              <div class="card-header border-0">
-                <div class="d-flex justify-content-between">
-                  <h3 class="card-title m-auto">KPI Title</h3>
-                </div>
-              </div>
-              <div class="card-body p-1">
-                <div class="row">
-                  <div class="col-12 col-md-12 text-center">
-                    <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125"
-                           value="20" data-width="120" data-height="120" data-fgColor="#f56954">
-                    <!-- <div class="knob-label">80 %</div> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-6" style="display: none;">
-            
-            <!-- AREA CHART -->
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Area Chart</h3>
+
+
+            <div class="card card-outline collapsed-card">
+
+              <!-- ======================= All Results Target START ======================= -->
+              <div class="card-header callout callout-info">
+                <h3 class="card-title">
+                  <i class="fal fa-circle mr-2"></i>
+                  Results Target
+                </h3>
 
                 <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
                   </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                  <button type="button" class="btn btn-tool"><i class="far fa-ellipsis-v"></i></button>
+                  <button type="button" class="btn btn-tool"><i class="nav-icon pe-7s-star"></i></button>
                 </div>
               </div>
-              <div class="card-body">
-                <div class="chart">
-                  <canvas id="areaChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+              <!-- ======================= All Results Target End ======================= -->
+
+              <div class="card-body" style="display: none;">
+                
+                <!-- ======================= All Sub Results Target START ======================= -->
+                <div class="card-header callout callout-warning">
+                  <h3 class="card-title">
+                    <i class="fal fa-circle mr-2"></i>
+                    Sub Results Target
+                  </h3>
+
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool"><i class="far fa-ellipsis-v"></i></button>
+                    <button type="button" class="btn btn-tool"><i class="nav-icon pe-7s-star"></i></button>
+                  </div>
                 </div>
+                <!-- ======================= All Sub Results Target END ======================= -->
+
+                <div class="card-body">
+                  
+                  <!-- ======================= All Sub Results Activity START ======================= -->
+                  <div class="card-header callout callout-danger">
+                    <h3 class="card-title">
+                      <i class="fal fa-circle mr-2"></i>
+                      Results Activity
+                    </h3>
+    
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool"><i class="far fa-ellipsis-v"></i></button>
+                      <button type="button" class="btn btn-tool"><i class="nav-icon pe-7s-star"></i></button>
+                    </div>
+                  </div>
+                  <!-- ======================= All Sub Results Activity END ======================= -->
+
+                </div>
+
               </div>
+
             </div>
+
 
           </div>
           
@@ -390,8 +484,13 @@ to get the desired effect
       <span class="nav-icon pe-7s-target"></span>
     </a>
     
-    <a href="#" onclick="open_sub_options()" class="btn-add-new btn btn-primary back-to-top rounded-circle">
+    <a href="#" onclick="open_sub_options()" class="mb-4 btn-add-new btn btn-primary back-to-top rounded-circle">
       <i class="fal fa-plus fa-2x m-1"></i>
+    </a>
+
+    <!-- Left Side-bar BUTTON -->
+    <a id="pushmenu" data-widget="pushmenu" class="mb-4 badge badge-primary right">
+      <i class="fas fa-bars"></i>
     </a>
 
   </div>
@@ -1209,6 +1308,8 @@ to get the desired effect
 
 <!-- KNOB Library -->
 <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- Slick -->
+<script src="plugins/slick/js/slick.js" type="text/javascript" charset="utf-8"></script>
 
 <script>
 
@@ -1216,7 +1317,9 @@ to get the desired effect
     Dropzone.autoDiscover = false;
     
     function openNav() {
-      document.getElementById("mySidebar").style.width = "60%";
+      if(screen.width <770) document.getElementById("mySidebar").style.width = "100%";
+      else  document.getElementById("mySidebar").style.width = "60%";
+      
       if($('body').hasClass('sidebar-mini')){
 
         $('body').removeClass('sidebar-mini').addClass('sidebar-collapse');
@@ -1321,7 +1424,7 @@ to get the desired effect
 // 		console.log(document.getElementById(val.id-1+""));
 // 		console.log(parseInt(val.id)+1+"");
 // 		console.log(document.getElementById(parseInt(val.id)+1+""));
-		if(hasClass(val, 'active_date')){
+		    if(hasClass(val, 'active_date')){
             if(val.id=="1"){
                 if(document.getElementById(parseInt(val.id)+1+"") != null && hasClass(document.getElementById(parseInt(val.id)+1+""), 'active_date')){
                     //do nothing
@@ -1370,13 +1473,13 @@ to get the desired effect
 		// $('#calender a').removeClass('active_date');
 		// AJAX Call
 		// $(val).addClass('active_date');
-	}
+	  }
 
-	function hasClass(element, className) {
-		return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
-	}
+    function hasClass(element, className) {
+      return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+    }
 	
-	function changeMonth(ch){
+	  function changeMonth(ch){
 
         let month = $('#month_year b').text().split(' ')[0];
         let year = parseInt($('#month_year b').text().split(' ')[1]);
@@ -1391,45 +1494,45 @@ to get the desired effect
             $('#month_year > h5').addClass('animate__fadeIn');
         }, 10);
 
-        // console.log(new Date(Date.parse(`${month} ${year}`)).getMonth()+1);
+        // console.log(new Date(Date.parse(`1 ${month} ${year}`)).getMonth()+1);
 
         if(ch === '>'){
 
-            if(new Date(Date.parse(`${month} ${year}`)).getMonth()+1 > 11){
+            if(new Date(Date.parse(`1 ${month} ${year}`)).getMonth()+1 > 11){
                 year++;
                 month="Jan";
               
                 setTimeout(()=>{
-                    $('#month_year > h5 > b').text(`${getMonthName(new Date(Date.parse(`${month} ${year}`)).getMonth()).toUpperCase()} ${year}`);
-                    setMonth(new Date(year, new Date(Date.parse(`${month} ${year}`)).getMonth()));
+                    $('#month_year > h5 > b').text(`${getMonthName(new Date(Date.parse(`1 ${month} ${year}`)).getMonth()).toUpperCase()} ${year}`);
+                    setMonth(new Date(year, new Date(Date.parse(`1 ${month} ${year}`)).getMonth()));
                 }, 10);
                 
             }
             else{
 
                 setTimeout(()=>{
-                    $('#month_year > h5 > b').text(`${getMonthName(new Date(Date.parse(`${month} ${year}`)).getMonth()+1).toUpperCase()} ${year}`);
-                    setMonth(new Date(year, new Date(Date.parse(`${month} ${year}`)).getMonth()+1));
+                    $('#month_year > h5 > b').text(`${getMonthName(new Date(Date.parse(`1 ${month} ${year}`)).getMonth()+1).toUpperCase()} ${year}`);
+                    setMonth(new Date(year, new Date(Date.parse(`1 ${month} ${year}`)).getMonth()+1));
                 }, 10);
 
             }
         }
         else{
 
-            if(new Date(Date.parse(`${month} ${year}`)).getMonth()-1 < 0){
+            if(new Date(Date.parse(`1 ${month} ${year}`)).getMonth()-1 < 0){
                 year--;
                 month="Dec";
               
                 setTimeout(()=>{
-                    $('#month_year > h5 > b').text(`${getMonthName(new Date(Date.parse(`${month} ${year}`)).getMonth()).toUpperCase()} ${year}`);
-                    setMonth(new Date(year, new Date(Date.parse(`${month} ${year}`)).getMonth()));
+                    $('#month_year > h5 > b').text(`${getMonthName(new Date(Date.parse(`1 ${month} ${year}`)).getMonth()).toUpperCase()} ${year}`);
+                    setMonth(new Date(year, new Date(Date.parse(`1 ${month} ${year}`)).getMonth()));
                 }, 10);
             }
             else{
 
                 setTimeout(()=>{
-                    $('#month_year > h5 > b').text(`${getMonthName(new Date(Date.parse(`${month} ${year}`)).getMonth()-1).toUpperCase()} ${year}`);
-                    setMonth(new Date(year, new Date(Date.parse(`${month} ${year}`)).getMonth()-1));
+                    $('#month_year > h5 > b').text(`${getMonthName(new Date(Date.parse(`1 ${month} ${year}`)).getMonth()-1).toUpperCase()} ${year}`);
+                    setMonth(new Date(year, new Date(Date.parse(`1 ${month} ${year}`)).getMonth()-1));
                 }, 10);
             }
         }
@@ -1480,7 +1583,7 @@ to get the desired effect
 
         // });
 
-      // KNOB
+        // KNOB
       $('.knob').knob({}); 
 
       // Date Picker
@@ -1499,13 +1602,13 @@ to get the desired effect
       //--------------
 
       var areaChartData = {
-        // labels  : ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels  : ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [
           {
             label               : 'Digital Goods',
             backgroundColor     : 'rgba(60,141,188,0.9)',
             borderColor         : 'rgba(60,141,188,0.8)',
-            pointRadius          : false,
+            // pointRadius          : false,
             pointColor          : '#3b8bba',
             pointStrokeColor    : 'rgba(60,141,188,1)',
             pointHighlightFill  : '#fff',
@@ -1517,12 +1620,12 @@ to get the desired effect
             label               : 'Electronics',
             backgroundColor     : 'rgba(210, 214, 222, 1)',
             borderColor         : 'rgba(210, 214, 222, 1)',
-            pointRadius         : false,
+            // pointRadius         : false,
             pointColor          : 'rgba(210, 214, 222, 1)',
             pointStrokeColor    : '#c1c7d1',
             pointHighlightFill  : '#fff',
             pointHighlightStroke: 'rgba(220,220,220,1)',
-            data                : [50, 100, 50, 81, 56, 55, 40]
+            // data                : [50, 100, 50, 81, 56, 55, 40]
           },
         ]
       }
@@ -1562,6 +1665,73 @@ to get the desired effect
         data: lineChartData, 
         options: lineChartOptions
       })
+
+    });
+
+
+    // Slick
+    $(document).ready(function() {
+      
+      $('.responsive').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        // infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+
+      const slider = document.querySelector('#calender');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 1.5;
+            slider.scrollLeft = (scrollLeft - walk);
+        });
 
     });
 

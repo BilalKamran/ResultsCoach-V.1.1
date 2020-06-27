@@ -36,12 +36,72 @@
     counter-reset: '';
 }
 
+@media (max-width: 425px) {
+    .main-sidebar > a.logo-sideBar{
+        display: flex !important;
+        padding: 1.13rem 0.5rem;
+    }
+    
+    .nav-item > a.logo-sideBar{
+        display: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    :not(.layout-fixed) .main-sidebar{
+        top:0 !important;
+    }
+}
+
 /* -------------------------------------- Nav-Bar END -------------------------------------- */
 
 
 
 
 /* -------------------------------------- Side-Bar START -------------------------------------- */
+
+#pushmenu{
+    position: fixed;
+    bottom: 1.25rem;
+    padding: 0.6rem;
+    color:white;
+    cursor: pointer;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.pushmenu-top{
+    display: none !important;
+}
+
+.main-sidebar > a.logo-sideBar{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    body:not(.sidebar-mini-md),
+    body:not(.sidebar-mini-md),
+    body:not(.sidebar-mini-md) .main-header {
+      margin-left: 0px;
+    }
+
+}
+
+@media (max-width: 768px){
+    
+    .pushmenu-top{
+        display: block !important;
+    }
+    
+    #pushmenu{
+        display: none;
+    }
+}
+
+:not(.layout-fixed) .main-sidebar {
+    top: initial;
+}
 
 [class*=sidebar-dark-]{
     background-color: #f4f6f9;
@@ -51,10 +111,11 @@
 
     /* border-bottom: 0.1px solid #dee2e6; */
     border-bottom: none;
+    /* padding: 22px; */
 }
 
 .logo-sideBar{
-    padding: 1.13rem 0.5rem;
+    /* padding: 1.13rem 0.5rem; */
     display: flex;
     justify-content: center;
 }
@@ -72,6 +133,21 @@
     font-size: 21px !important;
 }
 
+.reports a span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reports a span hr{
+    width: 100%;
+}
+
+.reports a p{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
 /* -------------------------------------- Side-Bar END -------------------------------------- */
 
 
@@ -83,14 +159,23 @@
     background-color: white;
 }
 
-.content{
-    /* background-color: white; */
-}
-
 .card-header{
     border-bottom: none;
     padding-top: 0.4rem;
     padding-bottom: 0.3rem;
+}
+
+.all-targets .card{
+    box-shadow: none;
+}
+
+.all-targets .card-header{
+    padding-top: 1rem;
+    padding-bottom: 0.9rem;
+}
+
+.all-targets .card .card-body{
+    padding: 0 0 0 1.25rem;
 }
 
 /* -------------------------------------- Content END -------------------------------------- */
@@ -100,13 +185,20 @@
 
 /* -------------------------------------- Content-Calender START -------------------------------------- */
 
+#calender-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 div#calender {
     background-color: white;
     overflow: auto;
     white-space: nowrap;
     min-height: 70px;
     padding-left: 20px;
-    padding-right: 20px;
+    /* padding-right: 20px; */
 }
 
 div#calender a {
@@ -121,8 +213,12 @@ div#calender a {
 }
   
 div#calender a:hover {
-    transform: scale(1.2);
+    background-color: #f3f9fd;
+    /* transform: scale(1.2); */
+}
 
+div#calender a:focus {
+    background: #c6eaff;
 }
 
 #month_year{
@@ -134,7 +230,8 @@ div#calender a:hover {
 
 #month_year h5 {
     /* font-size: 1.4vw; */
-    font-size: 15px;
+    font-size: 16px;
+    margin: auto 0px auto 20px;
 }
 
 .active_date{
@@ -142,18 +239,64 @@ div#calender a:hover {
     padding: 5px;
 }
 
-#month_year a{
-    /* font-size: 0.8vw; */
-    /* padding: 0.8vw; */
+#month_year-arrow-left{
+
     font-size: 15px;
-    padding: 10px;
+    padding: 25px 10px 25px 10px;
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px;
+}
+
+#month_year-arrow-right{
+
+    font-size: 15px;
+    padding: 25px 10px 25px 10px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
 }
 
 .drop-shadow{
     box-shadow: 0 7px 7px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
     border-radius: 10px;
 }
+
+#calender::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    scrollbar-width: none;
+}
+
+#calender{
+    scrollbar-width: none;
+}
+
+@media (max-width: 1000px){
+    
+    #month_year > h5{
+        margin-right: .5rem;
+    }
+
+}
+
 /* -------------------------------------- Content-Calender END -------------------------------------- */
+
+
+
+
+/* -------------------------------------- Content-Slick START -------------------------------------- */
+
+.slick-prev:before, .slick-next:before{
+    color: #007bff;
+    line-height: 0px;
+    font-size: 25px;
+}
+
+.slick-slide{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* -------------------------------------- Content-Slick END -------------------------------------- */
 
 
 
@@ -205,12 +348,19 @@ div#calender a:hover {
 
 .custom-knob{
     /* height: 10.4vh; */
-    height: 44px;
+    max-height: 44px;
+    max-width: 44px;
 }
 
 .knob-label{
     color:#007bff;
     font-weight: bold;
+}
+
+.knob-wrapper{
+    /* height: fit-content !important; */
+    height: 50px !important;
+    width: fit-content !important;
 }
 
 /* -------------------------------------- Content-Knob END -------------------------------------- */
@@ -221,17 +371,17 @@ div#calender a:hover {
 /* -------------------------------------- Add New Buttons START -------------------------------------- */
 
 .btn-add-new-target{
-    margin-bottom: 65px;
+    margin-bottom: 85px;
     display: none;
 }
 
 .btn-add-new-sub-target{
-    margin-bottom: 115px;
+    margin-bottom: 130px;
     display: none;
 }
 
 .btn-add-new-activity{
-    margin-bottom: 165px;
+    margin-bottom: 175px;
     display: none;
 }
 
@@ -268,7 +418,7 @@ div#calender a:hover {
 .custom_sidebar .closebtn {
     position: absolute;
     /* position: fixed; */
-    top: 16px;
+    top: 23px;
     z-index: 10;
     right: 25px;
     font-size: 20px;
@@ -304,6 +454,5 @@ textarea{
 .fs-17{
     font-size: 18px !important;
 }
-
 
 /* -------------------------------------- Right Side Bar END -------------------------------------- */

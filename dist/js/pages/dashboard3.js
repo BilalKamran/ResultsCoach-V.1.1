@@ -76,10 +76,11 @@ $(function () {
   var $visitorsChart = $('#visitors-chart')
   var visitorsChart  = new Chart($visitorsChart, {
     data   : {
-      labels  : ['18th', '20th', '22nd', '24th', '26th', '28th', '30th'],
+      // labels  : ['18th', '20th', '22nd', '24th', '26th', '28th', '30th'],
+      labels  : ['', '', '', '', '', '', ''],
       datasets: [{
         type                : 'line',
-        data                : [100, 120, 170, 167, 180, 177, 160],
+        data                : [60, 120, 100, 190, 0, 70, 160],
         backgroundColor     : 'transparent',
         borderColor         : '#007bff',
         pointBorderColor    : '#007bff',
@@ -90,7 +91,7 @@ $(function () {
       },
         {
           type                : 'line',
-          data                : [60, 80, 70, 67, 80, 77, 100],
+          // data                : [60, 80, 70, 67, 80, 77, 100],
           backgroundColor     : 'tansparent',
           borderColor         : '#ced4da',
           pointBorderColor    : '#ced4da',
