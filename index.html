@@ -21,7 +21,7 @@
   <!-- Drop Zone -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/dropzone.min.css" />
   <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> -->
   <!-- Slick -->
   <link rel="stylesheet" href="plugins/slick/css/slick.css">
   <link rel="stylesheet" href="plugins/slick/css/slick-theme.css">
@@ -173,7 +173,7 @@ to get the desired effect
   <!-- =================================== Slick-START =================================== -->
     <!-- container -->
     <div class="row pl-3 pr-3 ml-0 mr-0">
-      <div class="col-11 ml-auto mr-auto">
+      <div class="col-12 car-01 ml-auto mr-auto">
         <div class="responsive">
 
           <div class="card">
@@ -398,15 +398,18 @@ to get the desired effect
               <!-- ======================= All Results Target START ======================= -->
               <div class="card-header callout callout-info">
                 <h3 class="card-title">
-                  <i class="fal fa-circle mr-2"></i>
+                  <i onclick="toggleCompleteIcon(this)" class="fal fa-circle mr-2"></i>
                   Results Target
                 </h3>
 
-                <div class="card-tools">
+                <div class="card-tools m-auto">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
                   </button>
                   <button type="button" class="btn btn-tool"><i class="far fa-ellipsis-v"></i></button>
-                  <button type="button" class="btn btn-tool"><i class="nav-icon pe-7s-star"></i></button>
+                  <button onclick="toggleStarIcon(this)" type="button" class="btn btn-tool">
+                    <!-- <i class="nav-icon pe-7s-star"></i> -->
+                    <i class="fal fa-star"></i>
+                  </button>
                 </div>
               </div>
               <!-- ======================= All Results Target End ======================= -->
@@ -416,13 +419,13 @@ to get the desired effect
                 <!-- ======================= All Sub Results Target START ======================= -->
                 <div class="card-header callout callout-warning">
                   <h3 class="card-title">
-                    <i class="fal fa-circle mr-2"></i>
+                    <i onclick="toggleCompleteIcon(this)" class="fal fa-circle mr-2"></i>
                     Sub Results Target
                   </h3>
 
-                  <div class="card-tools">
+                  <div class="card-tools m-auto">
                     <button type="button" class="btn btn-tool"><i class="far fa-ellipsis-v"></i></button>
-                    <button type="button" class="btn btn-tool"><i class="nav-icon pe-7s-star"></i></button>
+                    <button onclick="toggleStarIcon(this)" type="button" class="btn btn-tool"><i class="fal fa-star"></i></button>
                   </div>
                 </div>
                 <!-- ======================= All Sub Results Target END ======================= -->
@@ -430,16 +433,18 @@ to get the desired effect
                 <div class="card-body">
                   
                   <!-- ======================= All Sub Results Activity START ======================= -->
-                  <div class="card-header callout callout-danger">
-                    <h3 class="card-title">
-                      <i class="fal fa-circle mr-2"></i>
-                      Results Activity
-                    </h3>
-    
-                    <div class="card-tools">
-                      <button type="button" class="btn btn-tool"><i class="far fa-ellipsis-v"></i></button>
-                      <button type="button" class="btn btn-tool"><i class="nav-icon pe-7s-star"></i></button>
-                    </div>
+                  <div class="card-header callout callout-danger" style="background: linear-gradient(to right, #fac7cc 40%, transparent 40%);">
+                        <h3 class="card-title">
+                          <i onclick="toggleCompleteIcon(this)" class="fal fa-circle mr-2"></i>
+                          Results Activity
+                          <br>
+                          <small class="ml-5">40% Complete</small>
+                        </h3>
+        
+                        <div class="card-tools m-auto">
+                          <button type="button" class="btn btn-tool"><i class="far fa-ellipsis-v"></i></button>
+                          <button onclick="toggleStarIcon(this)" type="button" class="btn btn-tool"><i class="fal fa-star"></i></button>
+                        </div>
                   </div>
                   <!-- ======================= All Sub Results Activity END ======================= -->
 
@@ -1267,9 +1272,9 @@ to get the desired effect
                     </p>
                   </div>
 
-                  <div class="ml-auto col-lg-3 col-md-3 col-sm-3">Save As Template</div>
-                  <div class="col-lg-2 col-md-2 col-sm-2">Add To...</div>
-                  <div class="col-lg-3 col-md-3 col-sm-3">Add To Today</div>
+                  <div class="ml-auto col-lg-3 col-md-3 col-sm-3 text-right">Save As Template</div>
+                  <div class="col-lg-2 col-md-2 col-sm-2 text-right">Add To...</div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 text-right">Add To Today</div>
 
                 </div>
               </form>
@@ -1419,6 +1424,22 @@ to get the desired effect
             return days[date.getDay()];
     }
 
+    function toggleCompleteIcon(x){
+
+      if($(x).hasClass('fa-circle'))  $(x).removeClass('fal fa-circle').addClass('fas fa-check-circle');
+      else  $(x).removeClass('fas fa-check-circle').addClass('fal fa-circle');
+
+    }
+    
+    function toggleStarIcon(x){
+
+      // if($(`${x} > i`).hasClass('fal fa-star'))  $(x).removeClass('fal fa-star').addClass('fas fa-star');
+      // else  $(`${x} > i`).removeClass('fas fa-check-circle').addClass('fal fa-circle');
+      if($(x).children().hasClass('fal fa-star')) $(x).children().removeClass('fal fa-star').addClass('fas fa-star');
+      else  $(x).children().removeClass('fas fa-star').addClass('fal fa-star');
+
+    }
+
     function activeDate(val){
 //      console.log(val.id-1+"");
 // 		console.log(document.getElementById(val.id-1+""));
@@ -1536,6 +1557,10 @@ to get the desired effect
                 }, 10);
             }
         }
+
+        $('#calender').animate({
+          scrollLeft: $("#calender").offset().left-50
+        }, 100);
 
     }
 
@@ -1676,7 +1701,7 @@ to get the desired effect
         dots: false,
         infinite: false,
         speed: 300,
-        // infinite: true,
+        infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [
